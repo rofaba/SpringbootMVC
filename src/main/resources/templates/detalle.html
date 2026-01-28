@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Juego</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header-title { border: 2px solid #000; padding: 15px; margin-bottom: 40px; }
+        .detail-container { border: 2px solid #000; padding: 30px; }
+        .description-box { border: 2px solid #000; padding: 15px; margin-top: 20px; min-height: 100px; }
+        .img-placeholder { width: 100%; max-width: 300px; border: 1px solid #000; }
+    </style>
+</head>
+<body class="container mt-4">
+
+<div class="text-center header-title">
+    <h1>Biblioteca de Juegos</h1>
+</div>
+
+<div class="detail-container">
+    <div class="row">
+        <div class="col-md-5 text-center">
+            <img th:src="${juego.imageUrl}" alt="Imagen del juego" class="img-fluid img-placeholder">
+        </div>
+        <div class="col-md-7">
+            <h1 th:text="${juego.title}">Nombre del juego</h1>
+            <h3 th:text="${juego.platform}">Plataforma</h3>
+            <h4 th:text="${juego.year}">Año</h4>
+        </div>
+    </div>
+
+    <div class="description-box">
+        <p th:text="${juego.description}">Descripción larga del videojuego...</p>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="/" class="btn btn-outline-dark px-5">VOLVER</a>
+    </div>
+</div>
+
+<footer class="text-center mt-5">
+    Realizado por rofaba
+
+</footer>
+
+</body>
+</html>
