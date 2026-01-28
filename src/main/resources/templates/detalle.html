@@ -11,6 +11,17 @@
         .img-placeholder { width: 100%; max-width: 300px; border: 1px solid #000; }
     </style>
 </head>
+<header class="header-container text-center">
+    <h1>Biblioteca de Juegos</h1>
+</header>
+
+<nav class="text-center platform-bar py-3 mb-4">
+    <a th:href="@{/}" class="mx-2 text-dark fw-bold text-decoration-none">TODOS</a> |
+    <a th:href="@{/plataforma/PC}" class="mx-2 text-dark fw-bold text-decoration-none">PC</a> |
+    <a th:href="@{/plataforma/PlayStation 5}" class="mx-2 text-dark fw-bold text-decoration-none">PS5</a> |
+    <a th:href="@{/plataforma/Nintendo Switch}" class="mx-2 text-dark fw-bold text-decoration-none">SWITCH</a>
+</nav>
+
 <body class="container mt-4">
 
 <div class="text-center header-title">
@@ -23,7 +34,7 @@
             <img th:src="${juego.imageUrl}" alt="Imagen del juego" class="img-fluid img-placeholder">
         </div>
         <div class="col-md-7">
-            <h1 th:text="${juego.title}">Nombre del juego</h1>
+            <h2 th:text="${juego.title}">Nombre del juego</h2>
             <h3 th:text="${juego.platform}">Plataforma</h3>
             <h4 th:text="${juego.year}">Año</h4>
         </div>

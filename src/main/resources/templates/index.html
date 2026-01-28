@@ -10,18 +10,17 @@
         .header-title { border: 2px solid #000; padding: 15px; margin-bottom: 10px; }
     </style>
 </head>
-<body class="container mt-4">
-
-<div class="text-center header-title">
+<header class="header-container text-center">
     <h1>Biblioteca de Juegos</h1>
-</div>
+</header>
 
-<div class="text-center py-3 border-bottom border-top mb-4">
-    <a th:href="@{/}" class="mx-2">TODOS</a> |
-    <a th:href="@{/plataforma/PC}" class="mx-2">PC</a> |
-    <a th:href="@{/plataforma/PlayStation 5}" class="mx-2">PS5</a> |
-    <a th:href="@{/plataforma/Nintendo Switch}" class="mx-2">SWITCH</a>
-</div>
+<nav class="text-center platform-bar py-3 mb-4">
+    <a th:href="@{/}" class="mx-2 text-dark fw-bold text-decoration-none">TODOS</a> |
+    <a th:href="@{/plataforma/PC}" class="mx-2 text-dark fw-bold text-decoration-none">PC</a> |
+    <a th:href="@{/plataforma/PlayStation 5}" class="mx-2 text-dark fw-bold text-decoration-none">PS5</a> |
+    <a th:href="@{/plataforma/Nintendo Switch}" class="mx-2 text-dark fw-bold text-decoration-none">SWITCH</a>
+</nav>
+<body class="container mt-4">
 
 <h2 class="text-center mb-4"
     th:if="${plataformaSeleccionada != null}"
