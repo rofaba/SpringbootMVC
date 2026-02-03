@@ -56,7 +56,8 @@
 </head>
 <body class="container mt-4">
 
-<header class="header-container text-center">
+<header class="header-container text-center"
+    th:style="'background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), url(https://thumbs.dreamstime.com/z/concept-video-games-two-gamepads-levitate-abstract-background-wide-banner-181892875.jpg?ct=jpeg); background-size: cover; background-position: center;'">
     <h1 class="display-4 fw-bold">Biblioteca de Juegos</h1>
 </header>
 
@@ -65,8 +66,7 @@
     <a th:href="@{/plataforma/PC}" class="mx-2 text-dark fw-bold text-decoration-none">PC</a> |
     <a th:href="@{/plataforma/PlayStation 5}" class="mx-2 text-dark fw-bold text-decoration-none">PS5</a> |
     <a th:href="@{/plataforma/Nintendo Switch}" class="mx-2 text-dark fw-bold text-decoration-none">SWITCH</a>
-    <a th:href="@{/juego/nuevo}" class="btn btn-success mb-3">+ Añadir Juego</a>
-
+    <a th:href="@{/juego/nuevo}" class="btn btn-success mb-2">Añadir Nuevo Juego</a>
 </nav>
 
 <main class="main-content">
