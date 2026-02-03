@@ -58,7 +58,7 @@
 
 <header class="header-container text-center"
     th:style="'background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), url(https://thumbs.dreamstime.com/z/concept-video-games-two-gamepads-levitate-abstract-background-wide-banner-181892875.jpg?ct=jpeg); background-size: cover; background-position: center;'">
-    <h1 class="display-4 fw-bold">Biblioteca de Juegos</h1>
+    <h1 class="display-5 fw-bold">Biblioteca de Juegos</h1>
 </header>
 
 <nav class="text-center platform-bar">
@@ -78,8 +78,8 @@
 
     <div class="row g-4">
         <div class="col-md-4" th:each="juego : ${juegos}">
-            <div class="card game-card h-100 shadow-sm"
-                 th:style="'background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), url(' + ${juego.imageUrl} + '); background-size: cover; background-position: center;'">
+            <div class="card game-card h-100 shadow-lg"
+                 th:style="'background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.9)), url(' + ${juego.imageUrl} + '); background-size: cover; background-position: center;'">
                 <div class="card-body">
                     <a th:href="@{/juego/{id}(id=${juego.id})}" class="text-decoration-none text-dark">
                         <h5 class="card-title fw-bold" th:text="${juego.title}">Título</h5>
