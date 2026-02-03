@@ -10,4 +10,5 @@ import java.util.List;
 public interface VideojuegoRepository extends JpaRepository<Videojuego, Long> {
     // Spring crea la consulta automáticamente basándose en el nombre del método
     List<Videojuego> findByPlatform(String platform);
+
 }

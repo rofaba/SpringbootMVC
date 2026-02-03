@@ -28,7 +28,7 @@
             border: 3px solid #000;
             padding: 40px;
             margin-bottom: 20px;
-            background-color: #fff; /* Fondo sólido para el título */
+            background-color: #fff;
         }
 
         .platform-bar {
@@ -65,6 +65,8 @@
     <a th:href="@{/plataforma/PC}" class="mx-2 text-dark fw-bold text-decoration-none">PC</a> |
     <a th:href="@{/plataforma/PlayStation 5}" class="mx-2 text-dark fw-bold text-decoration-none">PS5</a> |
     <a th:href="@{/plataforma/Nintendo Switch}" class="mx-2 text-dark fw-bold text-decoration-none">SWITCH</a>
+    <a th:href="@{/juego/nuevo}" class="btn btn-success mb-3">+ Añadir Juego</a>
+
 </nav>
 
 <main class="main-content">
@@ -76,10 +78,11 @@
 
     <div class="row g-4">
         <div class="col-md-4" th:each="juego : ${juegos}">
-            <div class="card game-card shadow-sm">
+            <div class="card game-card h-100 shadow-sm"
+                 th:style="'background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), url(' + ${juego.imageUrl} + '); background-size: cover; background-position: center;'">
                 <div class="card-body">
                     <a th:href="@{/juego/{id}(id=${juego.id})}" class="text-decoration-none text-dark">
-                        <h5 class="card-title fw-bold" th:text="${juego.title}">Nombre del Juego</h5>
+                        <h5 class="card-title fw-bold" th:text="${juego.title}">Título</h5>
                         <p class="card-text text-muted" th:text="${juego.platform}">Plataforma</p>
                         <span class="badge bg-dark">Ver más</span>
                     </a>
