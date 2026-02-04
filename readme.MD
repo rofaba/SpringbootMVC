@@ -1,13 +1,15 @@
 # 🎮 Biblioteca de Videojuegos - Spring Boot
 
-Este es un proyecto de gestión de videojuegos desarrollado con **Java 17** y **Spring Boot**. La aplicación permite visualizar un catálogo completo de juegos, filtrar por plataforma y ver detalles específicos de cada título.
+Este es un proyecto de gestión de videojuegos desarrollado con **Java 17** y **Spring Boot**.   
+
+La aplicación permite visualizar un catálogo completo de juegos, filtrar por plataforma, Agregar, editar y explorar detalles específicos de cada título.
+
 
 ## 🛠️ Tecnologías utilizadas
 
 * **Backend:** Java 17, Spring Boot 3, Spring Data JPA.
 * **Base de Datos:** MySQL (ejecutándose en Docker).
-* **Frontend:** Thymeleaf + Bootstrap (Diseño basado en wireframes).
-* **ORM:** Hibernate.
+* **Frontend:** Thymeleaf + Bootstrap 
 * **Gestión de dependencias:** Maven.
 
 ## 🚀 Configuración y Ejecución
